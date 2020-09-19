@@ -1,4 +1,4 @@
-# Bicho-Alagoano
+# Bicho Alagoano
 Uma seleção para o bichinho mais gracioso de Alagoas
 
 ### Tecnologias Utilizadas
@@ -17,7 +17,8 @@ Todo o conteúdo relacionado ao back-end está disponível na branch back
 npm init -y
 `````
 
-**Rotas disponíveis**
+#### Rotas disponíveis
+
 URL BASE: /api/bicho-alagoano
  
 - Registrar Usuário 
@@ -56,7 +57,14 @@ GET /pet/list
 DELETE /pet/delete/{id_do_pet}
 `````
 
+#### Para inicializar
+- Em desenvolvimento rode o comando abaixo no terminal 
+``````
+npm run dev
+``````
+- Para build do projeto
+
 ## Front-end
 Todo o conteúdo relacionado ao front-end está disponível na branch front
 
-**Rotas disponíveis**
+### Rotas disponíveis
