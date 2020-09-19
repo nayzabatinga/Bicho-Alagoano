@@ -9,6 +9,7 @@ Uma seleção para o bichinho mais gracioso de Alagoas
 
 ## Back-end
 Todo o conteúdo relacionado ao back-end está disponível na branch back
+
 **Considerações**
 - O back-end foi realizado em Node.js com Typescript.
 - O exemplo do arquivo .env esta disponível em .env.example
@@ -58,10 +59,12 @@ DELETE /pet/delete/{id_do_pet}
 `````
 
 #### Para inicializar
+
 - Em desenvolvimento rode o comando abaixo no terminal 
 ``````
 npm run dev
 ``````
+
 - Para build do projeto
 
 ## Front-end
