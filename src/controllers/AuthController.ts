@@ -9,14 +9,14 @@ class AuthController {
         .createUser(body)
         .then(data => {
             const { role } = body
-            const { uid, email, displayName} = data
+            const { uid, email } = data
             firestore
             .collection(CollectionEnum.USERS)
-            .doc(uid).set({ email, role, displayName })
+            .doc(uid).set({ email, role })
             .then(() => response.sendStatus(201))
-            .catch(err => response.status(400).send(err))
+            .catch(err => response.status(400).send(err.message))
         })
-        .catch(err => response.status(400).send(err))
+        .catch(err => response.status(400).send(err.message))
     }
 
     delete(request: Request, response: Response){
