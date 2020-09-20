@@ -65,9 +65,37 @@ DELETE /pet/delete/{id_do_pet}
 npm run dev
 ``````
 
-- Para build do projeto
+- Em produção rode o comando abaixo no terminal
+``````
+
+``````
 
 ## Front-end
 Todo o conteúdo relacionado ao front-end está disponível na branch front
 
 ### Rotas disponíveis
+
+- Login
+````````
+/
+````````
+
+- Cadastro de usuários
+-- Para Cliente
+``````
+/register/user/client
+``````
+-- Para Admin
+```````
+/register/user/admin
+```````
+
+- Registrar um pet
+```````
+/register/pet
+```````
+
+- Listar todos os pets cadastrados com a opção de deletar
+```````
+/list/pet
+```````
