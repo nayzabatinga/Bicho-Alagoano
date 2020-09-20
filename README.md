@@ -81,10 +81,12 @@ Todo o conteúdo relacionado ao front-end está disponível na branch front
 ````````
 
 - Cadastro de usuários
+
 -- Para Cliente
 ``````
 /register/user/client
 ``````
+
 -- Para Admin
 ```````
 /register/user/admin
