@@ -25,6 +25,20 @@
     color: #666;
     width: 100%;
 }
+.register-pets form input[type="file"]{
+    display: none;
+}
+.register-pets form label{
+    margin-top: .5rem;
+    border: 1px solid darkgreen;
+    border-radius: 4px;
+    padding: .4em 20px;
+    height: 2em;
+    font-size: 1em;
+    color: darkgreen;
+    width: 100%;
+    font-weight: bold;
+}
 .register-pets form input::placeholder{
     color: #999;
 }

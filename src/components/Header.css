@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: darkgreen;
+    padding: 1em;
+    color: white;
+}
+.header h1{
+    letter-spacing: .1em;
+}
+.header ul{
+    list-style: none;
+    display: flex;
+}
+.header ul li{
+    margin: .5em;
+}

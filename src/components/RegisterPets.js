@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './RegisterPets.css'
 import api from '../services/api'
 
-function RegisterPets(){
+function RegisterPets({ history }){
     const [ name, setName] = useState('')
     const [ owner, setOwner] = useState('')
     const [ phone, setPhone] = useState('')
@@ -14,7 +14,9 @@ function RegisterPets(){
             owner,
             phone
         })
-        .then(res => console.log(res.data))
+        .then(res => {
+            history.push('/finalized')
+        })
         .catch(err => console.log(err.message))
     }
 
@@ -23,19 +25,25 @@ function RegisterPets(){
             <form onSubmit={handleSubmit}>
                 <h2>CADASTRE SEU PET</h2>
                 <input
-                    placeholder="Nome do deu pet aqui"
+                    placeholder="Nome do pet"
                     value={name}
                     onChange={e => setName(e.target.value)}
                 />
                 <input
-                    placeholder="Seu nome aqui"
+                    placeholder="Seu nome"
                     value={owner}
                     onChange={e => setOwner(e.target.value)}
                 />
                 <input
-                    placeholder="Seu telefone aqui"
+                    placeholder="Telefone para contato"
                     value={phone}
                     onChange={e => setPhone(e.target.value)}
+                />
+                <label htmlFor="choosefile">Agora, uma foto do seu pet</label>
+                <input
+                    id="choosefile"
+                    type="file"
+                    accept=".png, .jpg, .jpeg"
                 />
                 <button type="submit">Enviar</button>
             </form>

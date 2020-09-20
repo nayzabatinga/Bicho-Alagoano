@@ -4,6 +4,7 @@ import Login from './components/Login'
 import RegisterUsers from './components/RegisterUsers'
 import RegisterPets from './components/RegisterPets'
 import ListPets from './components/ListPets'
+import Finalized from './components/Finalized'
 
 function Routes(){
     return (
@@ -12,6 +13,7 @@ function Routes(){
             <Route path="/register/user/:role"  component={RegisterUsers}/>
             <Route path="/register/pet"  component={RegisterPets}/>
             <Route path="/list/pet"  component={ListPets}/>
+            <Route path="/finalized" component={Finalized}/>
         </BrowserRouter>
     )
 }

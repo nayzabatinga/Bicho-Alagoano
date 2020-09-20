@@ -1,0 +1,16 @@
+.finalized{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.finalized img{
+    width: 20%;
+    margin: 3em 0;
+}
+.finalized h2{
+    text-align: center;
+}

@@ -17,24 +17,27 @@ function RegisterUsers({ history, match }){
         })
         .then(res => {
             console.log(res.status, res.data)
+            alert('Usuário cadastrado com sucesso')
             history.push('/')
         })
-        .catch(err => console.log(err.message))
+        .catch(err => {
+            alert('Não foi possível cadastrar o usuário, verifique se está apto para login e tente mais tarde')
+        })
     }
 
     return (
         <div className="register-users">
             <form onSubmit={handleSubmit}>
-                <h2>REALIZE SEU CADASTRO</h2>
+                <h2>CADASTRE-SE</h2>
                 <input 
                     type="email" 
-                    placeholder="seu@email.com"
+                    placeholder="Email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                 />
                 <input 
                     type="password" 
-                    placeholder="Sua senha"
+                    placeholder="Senha"
                     value={password}
                     onChange={ e => setPassword(e.target.value)}
                 />
