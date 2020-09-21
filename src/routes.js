@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Route} from 'react-router-dom'
-import Login from './components/Login'
-import RegisterUsers from './components/RegisterUsers'
-import RegisterPets from './components/RegisterPets'
-import ListPets from './components/ListPets'
-import Finalized from './components/Finalized'
+import Login from './components/Login/Login'
+import RegisterUsers from './components/RegisterUsers/RegisterUsers'
+import RegisterPets from './components/RegisterPets/RegisterPets'
+import ListPets from './components/ListPets/ListPets'
+import Finalized from './components/Finalized/Finalized'
 
 function Routes(){
     return (

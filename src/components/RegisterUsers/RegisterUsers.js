@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import api from '../services/api'
+import api from '../../services/api'
 import './RegisterUsers.css'
 
 function RegisterUsers({ history, match }){
@@ -10,7 +10,7 @@ function RegisterUsers({ history, match }){
         e.preventDefault()
         const { role } = match.params
 
-        await api.post('/user/register', {
+        await api.post('/registerUser', {
             email,
             password,
             role: role

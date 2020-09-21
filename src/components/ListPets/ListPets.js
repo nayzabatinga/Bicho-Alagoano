@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './ListPets.css'
-import api from '../services/api'
+import api from '../../services/api'
 
 function ListPets(){
     const [ pets, setPets ] = useState([])
     useEffect(() => {
         async function list(){
             await api
-            .get('/pet/list')
+            .get('/listPet')
             .then(res => {
                 setPets(res.data)
             })
@@ -18,7 +18,7 @@ function ListPets(){
     
     async function deletePet(id){
         await api
-        .delete(`/pet/delete/${id}`)
+        .delete(`/deletePet?id=${id}`)
         .then(() => {
             setPets(pets.filter(pet => pet.id !== id))
         })
@@ -38,7 +38,6 @@ function ListPets(){
                         <button type="button" onClick={() => deletePet(pet.id)} >EXCLUIR</button>
                     </li>
                 ))}
-                
             </ul>
         </div>
     )

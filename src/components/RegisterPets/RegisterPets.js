@@ -1,19 +1,23 @@
 import React, { useState } from 'react'
 import './RegisterPets.css'
-import api from '../services/api'
+import api from '../../services/api'
 
 function RegisterPets({ history }){
-    const [ name, setName] = useState('')
-    const [ owner, setOwner] = useState('')
-    const [ phone, setPhone] = useState('')
+    const [name, setName] = useState('')
+    const [owner, setOwner] = useState('')
+    const [phone, setPhone] = useState('')
+    const [avatar, setAvatar] = useState([])
+    
+    const headers = { 'Content-Type': 'multipart/form-data' }
 
     async function handleSubmit(e){
         e.preventDefault()
-        await api.post('/pet/register', {
+        await api.post('/registerPets', {
             name,
             owner,
-            phone
-        })
+            phone,
+            avatar
+        }, { headers })
         .then(res => {
             history.push('/finalized')
         })
@@ -44,6 +48,7 @@ function RegisterPets({ history }){
                     id="choosefile"
                     type="file"
                     accept=".png, .jpg, .jpeg"
+                    onChange={e => setAvatar(e.target.files[0])}
                 />
                 <button type="submit">Enviar</button>
             </form>

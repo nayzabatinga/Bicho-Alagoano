@@ -1,6 +1,6 @@
 import React from 'react'
 import './Finalized.css'
-import checked from '../assets/checked.png'
+import checked from '../../assets/checked.png'
 
 function Finalized(){
     return (
