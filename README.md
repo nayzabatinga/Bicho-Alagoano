@@ -8,7 +8,7 @@ Uma seleção para o bichinho mais gracioso de Alagoas
 - Firebase
 
 ## Back-end
-Todo o conteúdo relacionado ao back-end está disponível na branch back
+Todo o conteúdo relacionado ao back-end está disponível na branch back-end
 
 **Considerações**
 - O back-end foi realizado em Node.js com Typescript.
@@ -40,7 +40,7 @@ DELETE /user/delete/{id_do_usuario}
 
 - Adicionar imagem, nome e o telefone do Pet
 `````
-POST /pet/register
+POST /registerPet
 Body:{
     "name": "nome do pet",
     "owner": "nome do dono",
@@ -50,12 +50,12 @@ Body:{
 
 - Listar todos os Pet's registrados
 `````
-GET /pet/list
+GET /listPet
 `````
 
 - Excluir todos os dados registrados do Pet
 `````
-DELETE /pet/delete/{id_do_pet}
+DELETE /deletePet/?id=""
 `````
 
 #### Para inicializar
@@ -67,7 +67,7 @@ npm run dev
 
 - Em produção rode o comando abaixo no terminal
 ``````
-
+npm run build
 ``````
 
 ## Front-end
