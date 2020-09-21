@@ -24,11 +24,10 @@ URL BASE: /api/bicho-alagoano
  
 - Registrar Usuário 
 `````
-POST /user/register
+POST /registerUser
 Body: {
     "email": "seu@email.com",
     "password": "suasenha",
-    "displayName": "seu nome",
     "role": "sua caracteristica no sistema [admin, client]"
 }
 `````
