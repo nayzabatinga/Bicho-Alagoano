@@ -15,7 +15,7 @@ function Login({ history }){
                 // @TODO: Criar endpoint para buscar usuário por ID, para poder hierarquizar
                 console.log(user.user.uid)
                 // USER ROLE
-                // history.push('/register/pet')
+                history.push('/register/pet')
 
                 // @TODO: Colocar no próprio componente de logout
                 // auth.signOut()
