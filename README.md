@@ -19,8 +19,6 @@ npm init -y
 `````
 
 #### Rotas disponíveis
-
-URL BASE: /api/bicho-alagoano
  
 - Registrar Usuário 
 `````
@@ -34,7 +32,7 @@ Body: {
 
 - Deletar Usuário
 `````
-DELETE /user/delete/{id_do_usuario}
+DELETE /user/delete/?id={id_do_usuario}
 `````
 
 - Adicionar imagem, nome e o telefone do Pet
